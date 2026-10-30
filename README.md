@@ -61,7 +61,7 @@ Leading open-source database engines, query execution frameworks, and native ext
 
 *Sorted descending by GitHub stargazer count.*
 
-| 📦 Project | ⭐ Stars | 📜 Language / License | 🔍 Core Functionality & UDF Mechanism |
+| 📦 Project | ⭐ GitHub_Stars | 📜 Language / License | 🔍 Core Functionality & UDF Mechanism |
 | :--- | :--- | :--- | :--- |
 | **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** | [![Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers) | C++ / Apache-2.0 | Ultra-fast columnar OLAP engine. Implements executable script-based UDFs (Python, Shell, binaries) streaming rows via STDIN/STDOUT and SQL lambda expressions. |
 | **[Apache Spark](https://github.com/apache/spark)** | [![Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) | Scala, Python / Apache-2.0 | Unified analytics engine supporting scalar UDFs, high-throughput Apache Arrow vectorized Pandas UDFs, UDAFs, and user-defined table functions (UDTFs). |
@@ -105,7 +105,7 @@ Contributions are welcome! Please follow these guidelines:
 1. 🍴 Fork the repository.
 2. ✍️ Add your tool to either the **SaaS & Hosted Cloud Platforms** table or **Open-Source GitHub Projects** table maintaining sorted order:
    - SaaS platforms sorted by company valuation / revenue descending.
-   - Open-source tools sorted by GitHub star count descending, including the white social star badge linked to the repo's stargazers page.
+   - Open-source tools sorted by GitHub Stars_Count descending, including the white social Stars_Badge linked to the repo's stargazers page.
 3. 🔎 Ensure specific pricing tiers, free trial details, or licensing terms are factual and cited.
 4. 🚀 Submit a Pull Request with a clear description of the project.
 
