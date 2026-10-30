@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="techGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.5"/>
+      <circle cx="40" cy="40" r="1.5" fill="#38bdf8" fill-opacity="0.2"/>
+    </pattern>
+
+    <!-- Filter for Glow Effects -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .code-text { font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; }
+    .display-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(-15px, 10px); opacity: 0.65; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: scale(1.1) translate(10px, -10px); opacity: 0.3; }
+      50% { transform: scale(0.9) translate(0px, 15px); opacity: 0.6; }
+    }
+    @keyframes dashStream {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes pillFloat1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes pillFloat2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+
+    .orb-1 { animation: pulseOrb 8s ease-in-out infinite; transform-origin: 200px 100px; }
+    .orb-2 { animation: pulseOrb2 10s ease-in-out infinite; transform-origin: 1000px 240px; }
+    .stream-line { stroke-dasharray: 8, 12; animation: dashStream 4s linear infinite; }
+    .float-item-1 { animation: pillFloat1 5s ease-in-out infinite; }
+    .float-item-2 { animation: pillFloat2 6s ease-in-out infinite; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" />
+  <rect width="1200" height="360" fill="url(#techGrid)" />
+
+  <!-- Animated Ambient Orbs in Background -->
+  <g opacity="0.4">
+    <circle class="orb-1" cx="220" cy="110" r="160" fill="#0284c7" filter="url(#softGlow)" />
+    <circle class="orb-2" cx="980" cy="240" r="180" fill="#7c3aed" filter="url(#softGlow)" />
+    <circle cx="600" cy="60" r="120" fill="#38bdf8" filter="url(#softGlow)" opacity="0.2" />
+  </g>
+
+  <!-- Stream / Data Pipeline Visual Accents -->
+  <path class="stream-line" d="M 50,70 Q 250,20 450,70 T 850,70 T 1150,70" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-opacity="0.35" />
+  <path class="stream-line" d="M 50,290 Q 300,340 600,290 T 1150,290" fill="none" stroke="#818cf8" stroke-width="1.8" stroke-opacity="0.35" style="animation-direction: reverse;" />
+
+  <!-- Decorative Floating Runtime Pills in Background/Midground (positioned outside main text zone) -->
+  <g class="float-item-1">
+    <rect x="70" y="145" width="135" height="36" rx="18" fill="url(#badgeGrad1)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="137" y="168" class="code-text" font-size="13" font-weight="600" fill="#7dd3fc" text-anchor="middle">λ Python UDF</text>
+  </g>
+  <g class="float-item-2">
+    <rect x="80" y="200" width="125" height="36" rx="18" fill="url(#badgeGrad2)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="142" y="223" class="code-text" font-size="13" font-weight="600" fill="#c7d2fe" text-anchor="middle">⚙ C++ Engine</text>
+  </g>
+  <g class="float-item-1">
+    <rect x="990" y="145" width="140" height="36" rx="18" fill="url(#badgeGrad3)" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="1060" y="168" class="code-text" font-size="13" font-weight="600" fill="#e9d5ff" text-anchor="middle">🦀 Rust / pgrx</text>
+  </g>
+  <g class="float-item-2">
+    <rect x="1000" y="200" width="130" height="36" rx="18" fill="url(#badgeGrad1)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="1065" y="223" class="code-text" font-size="13" font-weight="600" fill="#7dd3fc" text-anchor="middle">⚡ Arrow Vector</text>
+  </g>
+
+  <!-- Central Foreground Content Card (Solid high-contrast container to guarantee legibility) -->
+  <g id="foreground-content">
+    <!-- Top Super-Header Category Pill -->
+    <rect x="460" y="48" width="280" height="30" rx="15" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.8" />
+    <circle cx="478" cy="63" r="4" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="605" y="68" class="code-text" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1.5" text-anchor="middle">DATABASE EXTENSIONS &amp; UDF</text>
+
+    <!-- Main Title: Awesome User-Defined Functions -->
+    <text x="600" y="142" class="display-text" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
+      Awesome <tspan fill="url(#primaryGlow)">User-Defined Functions</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="185" class="display-text" font-size="20" font-weight="500" fill="#94a3b8" text-anchor="middle">
+      Curated Roster of Cloud Data Warehouses, In-Engine Runtimes &amp; Native Extensions
+    </text>
+
+    <!-- Terminal Code Preview Bar in Center Foreground -->
+    <rect x="290" y="225" width="620" height="48" rx="10" fill="#090d16" stroke="#334155" stroke-width="1.4" />
+    <circle cx="312" cy="249" r="5" fill="#ef4444" opacity="0.8" />
+    <circle cx="328" cy="249" r="5" fill="#f59e0b" opacity="0.8" />
+    <circle cx="344" cy="249" r="5" fill="#10b981" opacity="0.8" />
+    <text x="368" y="254" class="code-text" font-size="14" fill="#e2e8f0">
+      <tspan fill="#ec4899">CREATE OR REPLACE FUNCTION</tspan> udf_transform(x) <tspan fill="#38bdf8">LANGUAGE PYTHON</tspan>;
+    </text>
+
+    <!-- Feature Tags Row -->
+    <text x="600" y="312" class="code-text" font-size="13" font-weight="600" fill="#64748b" text-anchor="middle" letter-spacing="1">
+      <tspan fill="#38bdf8">SNOWFLAKE</tspan> • <tspan fill="#818cf8">BIGQUERY</tspan> • <tspan fill="#c084fc">DUCKDB</tspan> • <tspan fill="#38bdf8">CLICKHOUSE</tspan> • <tspan fill="#818cf8">POSTGRESQL</tspan> • <tspan fill="#c084fc">DATABRICKS</tspan>
+    </text>
+  </g>
+</svg>

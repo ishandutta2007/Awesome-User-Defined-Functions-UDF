@@ -1,34 +1,49 @@
-# Awesome User-Defined Functions (UDF) & Database Extensions [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<div align="center">
 
-> A curated list of leading SaaS cloud data platforms and open-source database engines supporting User-Defined Functions (UDF), Custom Function Runtimes, Stored Procedures, and Native Database Extensions.
+<img src="./assets/banner.svg" alt="Awesome User-Defined Functions Banner" width="100%" />
 
-User-Defined Functions (UDFs) and database extension frameworks empower engineers and data architects to extend native database engines and cloud data warehouses with custom business logic, algorithmic models, geospatial transformations, external webhooks, and vector embeddings directly inside the query execution plane.
+# ⚡ Awesome User-Defined Functions (UDF) & Database Extensions 🚀
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+<p align="center">
+  <strong>A curated catalog of premier cloud data warehouses, self-hosted analytics engines, and extension frameworks supporting User-Defined Functions (UDF), Custom Function Runtimes, Stored Procedures, and Native In-Database Execution.</strong>
+</p>
+
+</div>
 
 ---
 
-## Table of Contents
+## 📑 Table of Contents
 
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS & Hosted Cloud Platforms](#saas--hosted-cloud-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted Cloud Platforms](#️-saas--hosted-cloud-platforms)
+- [🛠️ Open-Source GitHub Projects](#️-open-source-github-projects)
+- [📈 Star History](#-star-history)
+- [🤝 Support](#-support)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer](#️-disclaimer)
 
 ---
 
-## Sector Overview & Market Dynamics
+## 🌐 Sector Overview & Market Dynamics
 
 The global database management systems and cloud data warehouse market is estimated at **$105+ billion in 2026** (growing at an ~18% CAGR toward $180B by 2030). The sector is **moderately concentrated among a few dominant hyperscalers and specialist giants** (Google Cloud BigQuery, AWS Redshift, Snowflake, and Databricks command over 70% of enterprise analytical query workloads), while a dynamic tier of high-performance OLAP engines (ClickHouse, SingleStore, Teradata) and embeddable open-source runtimes (DuckDB, PostgreSQL) compete aggressively for real-time analytics, modular microservices, and edge computing.
 
 ---
 
-## SaaS & Hosted Cloud Platforms
+## ☁️ SaaS & Hosted Cloud Platforms
 
 The following SaaS and hosted query engines provide managed, sandboxed environments for executing scalar, tabular, aggregate, or external user-defined functions in SQL, Python, Java, Scala, JavaScript, and C++.
 
 *Sorted descending by estimated company valuation / market capitalization.*
 
-| Platform | Provider & Revenue / Valuation | Starting Tier Pricing | Free Tier / Trial Limits | Supported UDF Runtimes & Key Capabilities |
+| 🏢 Platform | 💰 Provider & Revenue / Valuation | 🏷️ Starting Tier Pricing | 🎁 Free Tier / Trial Limits | ⚙️ Supported UDF Runtimes & Key Capabilities |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Google Cloud BigQuery](https://cloud.google.com/bigquery/docs/user-defined-functions)** | Alphabet / Google (~$2.2 Trillion Market Cap; $40B+ Google Cloud Ann. Run Rate) | **$6.25 per TB** scanned (On-Demand) or **$0.044 per edition slot-hour** (Standard Edition) | **Free Forever**: 1 TB queries/mo + 10 GB active storage/mo; New accounts get **$300 credit valid for 90 days** | SQL, JavaScript, and Python UDFs, UDAFs, and Cloud Function remote endpoints. Direct integration with PyPI packages and external VPC networks. |
 | **[AWS Redshift](https://docs.aws.amazon.com/redshift/)** | Amazon / AWS (~$2.0 Trillion Market Cap; $105B+ AWS Ann. Run Rate) | **$0.25 per hour** (dc2.large on-demand cluster instance) or **$0.375 per RPU-hour** (Serverless) | **2-Month Free Trial**: 750 dc2.large node hours per month for 2 months (60 days); Free Serverless trial credit: **$300 credit over 90 days** | SQL UDFs and AWS Lambda-backed UDFs. Lambda UDFs allow invoking microservices with custom Python/Node/Java code without compute impact on Redshift. |
@@ -40,13 +55,13 @@ The following SaaS and hosted query engines provide managed, sandboxed environme
 
 ---
 
-## Open-Source GitHub Projects
+## 🛠️ Open-Source GitHub Projects
 
 Leading open-source database engines, query execution frameworks, and native extension toolkits that enable developer-defined function execution and runtimes.
 
 *Sorted descending by GitHub stargazer count.*
 
-| Project | Stars | Language / License | Core Functionality & UDF Mechanism |
+| 📦 Project | ⭐ Stars | 📜 Language / License | 🔍 Core Functionality & UDF Mechanism |
 | :--- | :--- | :--- | :--- |
 | **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** | [![Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers) | C++ / Apache-2.0 | Ultra-fast columnar OLAP engine. Implements executable script-based UDFs (Python, Shell, binaries) streaming rows via STDIN/STDOUT and SQL lambda expressions. |
 | **[Apache Spark](https://github.com/apache/spark)** | [![Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) | Scala, Python / Apache-2.0 | Unified analytics engine supporting scalar UDFs, high-throughput Apache Arrow vectorized Pandas UDFs, UDAFs, and user-defined table functions (UDTFs). |
@@ -65,25 +80,45 @@ Leading open-source database engines, query execution frameworks, and native ext
 
 ---
 
-## How to Contribute
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-User-Defined-Functions-UDF&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-User-Defined-Functions-UDF&type=date&legend=top-left)
+
+---
+
+## 💖 Support
+
+Thank you for exploring this curated guide to user-defined functions and database extension runtimes! 🌟
+
+If you found this resource helpful, please consider:
+- ⭐ **Starring** the repository to support visibility
+- 🍴 **Forking** and contributing additional database extension frameworks
+- 📢 **Sharing** with fellow data platform architects and software engineers
+- ☕ **Sponsoring or buying a coffee** via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007) to power ongoing open-source maintenance!
+
+---
+
+## 🤝 How to Contribute
 
 Contributions are welcome! Please follow these guidelines:
 
-1. Fork the repository.
-2. Add your tool to either the **SaaS & Hosted Cloud Platforms** table or **Open-Source GitHub Projects** table maintaining sorted order:
+1. 🍴 Fork the repository.
+2. ✍️ Add your tool to either the **SaaS & Hosted Cloud Platforms** table or **Open-Source GitHub Projects** table maintaining sorted order:
    - SaaS platforms sorted by company valuation / revenue descending.
    - Open-source tools sorted by GitHub star count descending, including the white social star badge linked to the repo's stargazers page.
-3. Ensure specific pricing tiers, free trial details, or licensing terms are factual and cited.
-4. Submit a Pull Request with a clear description of the project.
+3. 🔎 Ensure specific pricing tiers, free trial details, or licensing terms are factual and cited.
+4. 🚀 Submit a Pull Request with a clear description of the project.
 
 ---
 
-## Disclaimer
+## ⚖️ Disclaimer
 
-- This list is community-curated for informational purposes and does not represent an endorsement.
-- User-Defined Functions execute arbitrary logic inside or adjacent to query execution environments; always audit sandboxing, network isolation, permissions, and memory bounds before deploying UDFs in production environments.
-- Product pricing, free tier terms, and feature capabilities change over time. Verify details on the respective vendor or project websites.
+- 📌 This list is community-curated for informational purposes and does not represent an endorsement.
+- 🔒 User-Defined Functions execute arbitrary logic inside or adjacent to query execution environments; always audit sandboxing, network isolation, permissions, and memory bounds before deploying UDFs in production environments.
+- 💡 Product pricing, free tier terms, and feature capabilities change over time. Verify details on the respective vendor or project websites.
 
 ---
 
-*Curated with precision for data engineers, analytics architects, and database systems developers.*
+<div align="center">
+  <sub>Curated with precision for data engineers, analytics architects, and database systems developers.</sub>
+</div>
